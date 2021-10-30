@@ -2,7 +2,7 @@
 class NewsController {
    // [GET] /new 
    index(req, res) {
-      res.render('news')
+      return res.render('news')
    }
 
    // [GET] /new/:slug 

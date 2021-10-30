@@ -24,7 +24,8 @@
   "homepage": "https://github.com/TienHunter/nodejs__f8#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.4"
+    "express-handlebars": "^5.3.4",
+    "mysql2": "^2.3.2"
   },
   "devDependencies": {
     "morgan": "^1.10.0",

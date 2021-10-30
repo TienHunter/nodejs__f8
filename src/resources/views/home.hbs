@@ -1,1 +1,66 @@
-<h1>Home handlebars</h1>
+<head>
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<div class="w3-container">
+   <h2>List users table</h2>
+
+   <table class="w3-table-all w3-hoverable">
+      <thead>
+         <tr class="w3-light-grey">
+
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Action</th>
+         </tr>
+      </thead>
+      <tbody>
+         {{#each dataCourse}}
+         <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.firstName}}</td>
+            <td>{{this.lastName}}</td>
+            <td>{{this.email}}</td>
+            <td>
+               <div style="display:flex">
+                  <form action="" method="GET"><button type="button"><a href="/detail/user/{{this.id}}"
+                           target="_blank">Detail</a></button>
+                  </form>
+                  <form action="/edit-user/{{this.id}}" method="GET"><button type="submit">Edit</button></form>
+                  <form action="/delete-user/{{this.id}}" method="POST"><button type="submit">Delete</button></form>
+               </div>
+            </td>
+         </tr>
+         {{/each}}
+
+      </tbody>
+
+
+   </table>
+
+   <div class="mt-4">
+      <h2>Create new user</h2>
+      <form method="POST" action="/create-new-user">
+         <div class="form-row">
+            <div class="form-group col-md-6">
+               <label for="firstName">First Name</label>
+               <input type="text" name="firstName" class="form-control" id="firstName" placeholder="your first name">
+            </div>
+            <div class="form-group col-md-6">
+               <label for="lastName">Last Name</label>
+               <input type="text" name="lastName" class="form-control" id="lastName" placeholder="your last name">
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="your email">
+         </div>
+
+
+         <button type="submit" class="btn btn-primary">Create</button>
+      </form>
+   </div>
+
+</div>

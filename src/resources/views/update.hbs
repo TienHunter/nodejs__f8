@@ -1,0 +1,25 @@
+<div class="mt-4">
+   <h2>Update user</h2>
+   <form method="POST" action="/update-user">
+      {{#with dataUser}}
+      <div class="form-row">
+         <div class="form-group col-md-6">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" class="form-control" id="firstName" placeholder="your first name"
+               value="{{firstName}}" />
+         </div>
+         <div class="form-group col-md-6">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" class="form-control" id="lastName" placeholder="your last name"
+               value="{{lastName}}" />
+         </div>
+      </div>
+      <div class="form-group">
+         <label for="email">Email</label>
+         <input type="email" name="email" class="form-control" id="email" placeholder="your email" value="{{email}}" />
+      </div>
+      <input type="text" name="id" value="{{id}}" hidden />
+      {{/with}}
+      <button type="submit" class="btn btn-primary">Update</button>
+   </form>
+</div>
