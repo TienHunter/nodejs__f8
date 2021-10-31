@@ -5,7 +5,8 @@ const exphbs = require('express-handlebars');
 const app = express()
 const port = 3000
 
-const route = require('./routes')
+const route = require('./routes/index')
+const apiRouter = require('./routes/api')
 // const connection = require('./config/db/index')
 //static files in express
 app.use(express.static(path.join(__dirname, 'public')))
@@ -25,6 +26,9 @@ app.set('views', path.join(__dirname, 'resources', 'views'));
 
 // routes init
 route(app);
+apiRouter(app);
+
+// route api
 
 app.listen(port, () => {
    console.log(`Example app listening at http://localhost:${port}`)

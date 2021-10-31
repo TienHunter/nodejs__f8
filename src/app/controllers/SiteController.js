@@ -15,7 +15,6 @@ class SiteController {
    }
    async createNewUser(req, res) {
       let { firstName, lastName, email } = req.body;
-      console.log(firstName, lastName, email)
 
       await connection.execute(`INSERT INTO users(firstName, lastName, email) VALUES (?,?,?)`,
          [firstName, lastName, email]);
