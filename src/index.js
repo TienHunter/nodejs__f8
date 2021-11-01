@@ -7,6 +7,9 @@ const port = 3000
 
 const route = require('./routes/index')
 const apiRouter = require('./routes/api')
+const formidable = require("formidable");
+
+
 // const connection = require('./config/db/index')
 //static files in express
 app.use(express.static(path.join(__dirname, 'public')))
@@ -23,6 +26,7 @@ app.engine('.hbs', exphbs({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
 
 app.set('views', path.join(__dirname, 'resources', 'views'));
+
 
 // routes init
 route(app);

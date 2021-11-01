@@ -9,6 +9,8 @@ router.post('/create-new-user', siteController.createNewUser);
 router.get('/edit-user/:id', siteController.editUser);
 router.post('/update-user', siteController.updateUser);
 router.post('/delete-user/:id', siteController.deleteUser);
+router.get('/upload', siteController.getUploadFile);
+router.post('/uploadFile', siteController.hanldeUploadFile);
 router.get('/', siteController.index);
 
 module.exports = router;

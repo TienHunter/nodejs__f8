@@ -1,0 +1,8 @@
+HTML/CSS passed
+javascrip passed
+sql --> MySql
+bootstrap 
+nodejs 14.17.3
+reactjs
+redux
+
